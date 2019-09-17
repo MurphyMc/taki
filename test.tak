@@ -1,0 +1,23 @@
+func excite n {
+  set r ""
+  while {[> $n 0]} {
+    decr n
+    set r [. $r !]
+  }
+  return $r
+}
+
+print "Hello, World"
+println [excite 3]
+
+if [> $argc 1] {
+  println "\nCommandline arguments:"
+  set i 1
+  while {[< $i $argc]} {
+    print "  $i - "
+    println [eval "\$argv$i"]
+    incr i
+  }
+}  { # else
+  println "(No commandline arguments.)"
+}
