@@ -8,9 +8,20 @@ meeting its dubious requirements, that seems unlikely!
 In the unlikely event that you want to add more functionality to it or
 embed it in another program, it shouldn't be too hard.
 
+# Invoking Taki
+
+The `taki` interpreter can either run a Taki script file, or can be run
+interactively.  To run a file, simply use the filename as the first
+commandline argument.  To run in interactive mode, pass `-i` as the first
+argument.  Additional commandline arguments are made available to Taki
+(see the example program).
+
+In interactive mode, you can enter multiple lines by ending each one with
+a backslash.  Quit with Ctrl-D.
+
 # Example
 
-Here's a simple test program:
+Here's a simple example program:
 ```
 func excite n {
   set r ""
