@@ -166,7 +166,7 @@ static std::string N (std::vector<std::string> args, Taki * taki, std::shared_pt
   char * endptr;                                                                                     \
   double a1 = std::strtod(args[1].c_str(), &endptr);                                                 \
   double a2 = std::strtod(args[2].c_str(), &endptr);                                                 \
-  return std::to_string(a1 O a2);                                                                    \
+  return _to_string(a1 O a2);                                                                        \
 }
 
 #define IMATHOP(N,O) \
@@ -174,9 +174,9 @@ static std::string N (std::vector<std::string> args, Taki * taki, std::shared_pt
 {                                                                                                    \
   ARGS(2);                                                                                           \
   char * endptr;                                                                                     \
-  auto a1 = std::strtoll(args[1].c_str(), &endptr, 0);                                             \
-  auto a2 = std::strtoll(args[2].c_str(), &endptr, 0);                                             \
-  return std::to_string(a1 O a2);                                                                    \
+  auto a1 = std::strtoll(args[1].c_str(), &endptr, 0);                                               \
+  auto a2 = std::strtoll(args[2].c_str(), &endptr, 0);                                               \
+  return _to_string(a1 O a2);                                                                        \
 }
 
 static std::string _decr (std::vector<std::string> args, Taki * taki, std::shared_ptr<TakiContext> ctxt)
