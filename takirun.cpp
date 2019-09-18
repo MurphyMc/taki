@@ -47,7 +47,11 @@ int main (int argc, char * argv[])
       {
         try
         {
-          t.run(prog);
+          auto r = t.run(prog);
+          if (r.length())
+          {
+            std::cout << "--> " << r << std::endl;
+          }
         }
         catch (const char * s)
         {
