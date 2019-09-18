@@ -69,7 +69,7 @@ static std::string _int (std::vector<std::string> args, Taki * taki, std::shared
 {
   std::string r;
   ARGS(1);
-  return "" + std::stoi(args[1]);
+  return _to_string(std::stoi(args[1]));
 }
 
 static std::string _set (std::vector<std::string> args, Taki * taki, std::shared_ptr<TakiContext> ctxt)
