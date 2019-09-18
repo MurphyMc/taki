@@ -72,6 +72,14 @@ static std::string _int (std::vector<std::string> args, Taki * taki, std::shared
   return _to_string(std::stoi(args[1]));
 }
 
+static std::string _sysexit (std::vector<std::string> args, Taki * taki, std::shared_ptr<TakiContext> ctxt)
+{
+  std::string r;
+  ARGS(1);
+  exit(std::stoi(args[1]));
+  return ""; // Unreachable
+}
+
 static std::string _set (std::vector<std::string> args, Taki * taki, std::shared_ptr<TakiContext> ctxt)
 {
   ARGS(2);
@@ -490,4 +498,5 @@ Taki::Taki ()
   builtins["if"] = _if;
   builtins["incr"] = _incr;
   builtins["decr"] = _decr;
+  builtins["exit"] = _sysexit;
 }
