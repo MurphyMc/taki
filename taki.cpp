@@ -6,7 +6,7 @@
 
 #define ARGS(N) if (args.size() != (N)+1) throw "Got wrong number of arguments";
 #define MINARGS(N) if (args.size() < (N)+1) throw "Got too few arguments";
-#define MAXARGS(N) if (args.size() > N) throw "Got too many arguments";
+#define MAXARGS(N) if (args.size() > (N)+1) throw "Got too many arguments";
 
 
 static std::string _join (std::string sep, std::vector<std::string> strs)
